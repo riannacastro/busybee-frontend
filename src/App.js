@@ -1,15 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
+import react from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import Pages from './components/Pages';
 
-function App() {
-  return (
+export default class App extends React.Component {
+
+  state = {
+    page: "home"
+  }
+
+  render() {
+    return (
     <div className="App">
       < NavBar />
       < Pages />
     </div>
-  );
-}
+    );
+  }
+};
 
-export default App;
