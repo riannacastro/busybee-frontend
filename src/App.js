@@ -10,10 +10,16 @@ export default class App extends React.Component {
     page: "home"
   }
 
+  changePage = (page) => {
+    this.setState({
+      page: page
+    })
+  }
+
   render() {
     return (
     <div className="App">
-      < NavBar />
+      < NavBar changePage={this.changePage}/>
       < Pages />
     </div>
     );
