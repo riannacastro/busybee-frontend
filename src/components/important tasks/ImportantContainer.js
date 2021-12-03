@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 
 export default class ImportantContainer extends Component {
+
+    state = {
+        important: []
+    }
+    
     render() {
         return (
             <div>

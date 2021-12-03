@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 
 export default class FinishedContainer extends Component {
+    state = {
+        finished: []
+    }
+    
     render() {
         return (
             <div>
