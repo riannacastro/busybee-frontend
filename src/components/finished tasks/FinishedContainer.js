@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
 
-export default class FinishedContainer extends Component {
-    state = {
-        finished: []
-    }
-    
-    render() {
+
+export default function FinishedContainer() {
+    // state = {
+    //     finished: []
+    // }
+
+
         return (
             <div>
                 <h1>Finished working</h1>
             </div>
         )
-    }
+
 }
