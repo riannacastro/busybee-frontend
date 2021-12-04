@@ -1,6 +1,6 @@
 
 
-export default function HomeContainer() {
+export default function HomeContainer(props) {
 
     // state = {
     //     lists: []
@@ -18,7 +18,7 @@ export default function HomeContainer() {
             <div>
                 <h1>Home working</h1>
                 <ul>
-                    {/* {this.state.lists.map(l => <li>{l.title}< br/> {l.tasks}</li>)} */}
+                    {props.home.map(l => <li>{l.title}< br/> {l.tasks}</li>)}
                 </ul>
             </div>
         )
