@@ -29,11 +29,11 @@ export default class App extends React.Component {
     this.fetchAPI("finished")
   }
 
-  fetchAPI(home) {
-    fetch('http://localhost:3001/lists')
+  fetchAPI(arg) {
+    fetch(`http://localhost:3000/${arg}`)
     .then(r => r.json())
-    .then(data => this.setState({
-      [home]: data
+    .then(({data}) => this.setState({
+      [arg]: data
     }))
   }
 
@@ -48,7 +48,11 @@ export default class App extends React.Component {
            <Route path="/home">
              <p>Home</p>
           </Route> */}
-           < Pages home={this.state.home} important={this.state.important} finished={this.state.important}/>
+           < Pages
+            home={this.state.home}
+            important={this.state.important} 
+            finished={this.state.finished}
+            />
       </div>
     </Router>
     );

@@ -1,7 +1,7 @@
 
 
 export default function HomeContainer(props) {
-
+    console.log(props)
     // state = {
     //     lists: []
     // }

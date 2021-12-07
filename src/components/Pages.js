@@ -26,9 +26,9 @@ export default function Pages({home, important, finished}) {
     
     return (
        <Switch>
-           <Route exact path="/home" component={() => < HomeContainer home={home} />} />
-           <Route exact path="/important">important</Route>
-           <Route exact path="/finished">finished</Route>
+           <Route exact path="/home" component={(routerProps) => <HomeContainer home={home} routerInfo={routerProps} />}/>
+           <Route exact path="/important" component={(routerProps) => <HomeContainer home={home} routerInfo={routerProps} />}/>
+           <Route exact path="/finished" component={(routerProps) => <HomeContainer home={home} routerInfo={routerProps} />}/>
        </Switch>
     )
 }
