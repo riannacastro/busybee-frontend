@@ -7,6 +7,7 @@ import {
   Link,
   Route
  } from 'react-router-dom';
+import ListForm from './components/ListForm';
 
 export default class App extends React.Component {
 
@@ -41,6 +42,7 @@ export default class App extends React.Component {
     return (
       <Router>
          <div className="App">
+           
            < NavBar changePage={this.changePage}/>
            {/* < Link to="/home">Home</Link>
            < Link to="/important">Important Tasks</Link>
