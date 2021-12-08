@@ -2,17 +2,6 @@
 
 export default function HomeContainer(props) {
     console.log(props)
-    // state = {
-    //     lists: []
-    // }
-
-    // componentDidMount() {
-    //     fetch('http://localhost:3001/lists')
-    //     .then(r => r.json())
-    //     .then(data => this.setState({
-    //         lists: data
-    //     }))
-    // }
 
         return (
             <div>

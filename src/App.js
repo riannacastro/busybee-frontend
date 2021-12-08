@@ -37,14 +37,6 @@ export default class App extends React.Component {
     }))
   }
 
-  // fetchAPI(arg) {
-  //   fetch(`http://localhost:3000/${arg}`)
-  //   .then(r => r.json())
-  //   .then(({data}) => this.setState({
-  //     [arg]: data
-  //   }))
-  // }
-
   render() {
     return (
       <Router>
