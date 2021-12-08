@@ -29,13 +29,21 @@ export default class App extends React.Component {
     this.fetchAPI("finished")
   }
 
-  fetchAPI(arg) {
-    fetch(`http://localhost:3000/${arg}`)
+  fetchAPI() {
+    fetch(`http://localhost:3000/lists`)
     .then(r => r.json())
-    .then(({data}) => this.setState({
-      [arg]: data
+    .then(data => this.setState({
+      home: data
     }))
   }
+
+  // fetchAPI(arg) {
+  //   fetch(`http://localhost:3000/${arg}`)
+  //   .then(r => r.json())
+  //   .then(({data}) => this.setState({
+  //     [arg]: data
+  //   }))
+  // }
 
   render() {
     return (
