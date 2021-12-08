@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 export default function NavBar() {
     return (
         <div>
-            <NavLink 
+            <NavLink
                 to="/home" 
                 className={isActive => isActive ? "selected" : ""}>
             Home</NavLink>
@@ -16,6 +16,10 @@ export default function NavBar() {
                 to="/finished"
                 className={isActive => isActive ? "selected" : ""}>
             Finished Tasks</NavLink>
+            <NavLink 
+                to="/newlist"
+                className={isActive => isActive ? "selected" : ""}>
+            New List</NavLink>
         </div>
     )
 }

@@ -8,7 +8,7 @@ export default function ImportantContainer() {
 
         return (
             <div>
-                <h1>important working</h1>
+                <h1>Important Lists:</h1>
             </div>
         )
 }

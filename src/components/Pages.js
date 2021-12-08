@@ -38,6 +38,10 @@ export default function Pages({home, important, finished}) {
                 component={routerProps => <FinishedContainer finished={finished} 
                 routerInfo={routerProps} />}
            />
+           <Route exact path="/newlist" 
+                component={routerProps => <FinishedContainer finished={finished} 
+                routerInfo={routerProps} />}
+           />
            {/* <Route exact path="/home/:id" component={routerProps => <FinishedContainer finished={finished} routerInfo={routerProps} />}/> maybe put in new component for show */} 
        </Switch>
     )
