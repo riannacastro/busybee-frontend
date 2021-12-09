@@ -1,3 +1,10 @@
 export default function reducer(initialState = [], action) {
-    return initialState
+    switch (action.type) {
+        // case value:
+
+        //  break;
+
+        default:
+            return state;
+    }
 };
