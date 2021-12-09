@@ -1,8 +1,8 @@
 import ListForm from "../ListForm"
 
 
-export default function HomeContainer(props) {
-    console.log(props)
+export default function HomeContainer() {
+    
 
         return (
             <div>

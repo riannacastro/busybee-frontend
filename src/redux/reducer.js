@@ -1,4 +1,4 @@
-export default function reducer(initialState = [], action) {
+function reducer(initialState = [], action) {
     switch (action.type) {
         // case value:
 
@@ -8,3 +8,4 @@ export default function reducer(initialState = [], action) {
             return state;
     }
 };
+export default reducer;
