@@ -1,9 +1,10 @@
+import React from "react"
 import ListForm from "../ListForm"
 
 
-export default function TasksContainer() {
+export default class TasksContainer extends React.Component {
     
-
+    render() {
         return (
             <div>
                 <h1>All Lists:</h1>
@@ -13,4 +14,6 @@ export default function TasksContainer() {
                 </ul>
             </div>
         )
+
+    }
 }
