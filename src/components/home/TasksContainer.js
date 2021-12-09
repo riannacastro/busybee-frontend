@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-
+import { setTasks } from '../../redux/tasksActions';
 
 
 class TasksContainer extends React.Component {
@@ -8,7 +8,7 @@ class TasksContainer extends React.Component {
     componentDidMount() {
         fetch("http://localhost:3000/lists")
         .then(r => r.json())
-        .then(data => console.log(data))
+        .then(data => this.props.setTasks(data))
     }
     
     render() {
@@ -21,4 +21,11 @@ class TasksContainer extends React.Component {
 
     }
 }
-export default connect()(TasksContainer)
+
+function mapDispatchToProps(dispatch) {
+    return {
+        setTasks: (tasks) => dispatch(setTasks(tasks))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(TasksContainer)
