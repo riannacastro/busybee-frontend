@@ -6,9 +6,7 @@ import { setLists } from '../../redux/listActions';
 class ListContainer extends React.Component {
 
     componentDidMount() {
-        fetch("http://localhost:3000/lists")
-        .then(r => r.json())
-        .then(data => this.props.setLists(data))
+        this.props.setLists()
     }
     
     render() {
@@ -26,13 +24,13 @@ class ListContainer extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        lists: state.lists
+        lists: state
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        setLists: (lists) => dispatch(setLists(lists))
+        setLists: () => dispatch(setLists())
     }
 }
 
