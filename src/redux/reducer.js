@@ -1,8 +1,11 @@
-function reducer(initialState = [], action) {
+function reducer(state = [], action) {
     switch (action.type) {
-        // case value:
+         case "SET_TASKS":
 
-        //  break;
+            return {
+                ...state, 
+                tasks: action.payload
+            };
 
         default:
             return state;
