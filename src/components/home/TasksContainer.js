@@ -1,19 +1,24 @@
 import React from "react"
-import ListForm from "../ListForm"
+import { connect } from "react-redux"
 
 
-export default class TasksContainer extends React.Component {
+
+class TasksContainer extends React.Component {
+
+    componentDidMount() {
+        fetch("http://localhost:3000/lists")
+        .then(r => r.json())
+        .then(data => console.log(data))
+    }
     
     render() {
         return (
             <div>
                 <h1>All Lists:</h1>
-                < ListForm />
-                <ul>
-                    {props.home.map(l => <li>{l.title}< br/> {l.tasks}</li>)}
-                </ul>
+        
             </div>
         )
 
     }
 }
+export default connect()(TasksContainer)
