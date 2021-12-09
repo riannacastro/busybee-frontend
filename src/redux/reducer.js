@@ -1,10 +1,10 @@
 function reducer(state = [], action) {
     switch (action.type) {
-         case "SET_TASKS":
+         case "SET_LISTS":
 
             return {
                 ...state, 
-                tasks: action.payload
+                lists: action.payload
             };
 
         default:

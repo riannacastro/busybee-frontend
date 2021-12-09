@@ -1,0 +1,1 @@
+export const setLists = (lists) => ({type: "SET_LISTS", payload: lists})

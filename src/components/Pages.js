@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import TasksContainer from './home/TasksContainer';
+import TasksContainer from './home/ListContainer';
 
 export default function Pages() {
     
