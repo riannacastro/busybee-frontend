@@ -7,9 +7,9 @@ import {
   Link,
   Route
  } from 'react-router-dom';
-import ListForm from './components/ListForm';
+import { connect } from 'react-redux'
 
-export default class App extends React.Component {
+class App extends React.Component {
 
   state = {
     // page: "home",
@@ -61,3 +61,12 @@ export default class App extends React.Component {
   }
 };
 
+function mapStateToProps(reduxStoreState) {
+  return {
+    home: reduxStoreState.home,
+    important: reduxStoreState.important,
+    finished: reduxStoreState.finished
+  }
+}
+
+export default connect(mapStateToProps)(App);
