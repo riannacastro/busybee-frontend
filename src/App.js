@@ -1,9 +1,8 @@
 import React from 'react';
-import './App.css';
+import '../src/css/App.css';
 import { Switch, Route }from 'react-router-dom';
 import ListContainer from './components/home/ListContainer';
 import WelcomePage from './components/WelcomePage';
-import store from './redux/store';
 
 
 function App() {
