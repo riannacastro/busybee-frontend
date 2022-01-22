@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const ListCard = (props) => {
-    return (
-        <div key={props.id} className="list-card">
-            Title: {props.title}
-            Tasks: {props.tasks}
-        </div>
-    )
+function ListCard(props) {
+  return <div className="list-card">
+      <b>Title: {props.title}</b> <br />
+      List: <br />
+      {props.tasks}
+  </div>;
 }
+export default ListCard

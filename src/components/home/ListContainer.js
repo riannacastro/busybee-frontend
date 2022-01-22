@@ -1,6 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import { setLists } from '../../redux/listActions';
+import ListCard from "./ListCard";
 
 
 class ListContainer extends React.Component {
@@ -14,7 +15,7 @@ class ListContainer extends React.Component {
             <div>
                 <h1>All Lists:</h1>
                 <div>
-                    {this.props.lists.map(l => <p>{l.title}</p>)}
+                    {this.props.lists.map(l => <ListCard key={l.id} {...l}/>)}
                 </div>
             </div>
         )
@@ -24,7 +25,7 @@ class ListContainer extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        lists: state
+        lists: state.lists
     }
 }
 
