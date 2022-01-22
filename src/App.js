@@ -1,15 +1,18 @@
 import React from 'react';
 import './App.css';
-import { NavLink } from 'react-router-dom';
-import Pages from './components/Pages';
+import { Switch, Route }from 'react-router-dom';
+import ListContainer from './components/home/ListContainer';
+import WelcomePage from './components/WelcomePage';
+import store from './redux/store';
 
 
 function App() {
     return (
      <div className="App">
-       <NavLink to="/">Home</NavLink>
-       <NavLink to="lists">Lists</NavLink>
-       <Pages />
+       <Switch>
+         <Route exact path="/" component={WelcomePage} />
+         <Route path="/home" component={routerProps => < ListContainer routerProps={routerProps} /> } />
+       </Switch>
      </div>
     );
 };

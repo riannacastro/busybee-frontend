@@ -2,9 +2,6 @@
 
 export default function ImportantContainer() {
 
-    // state = {
-    //     important: []
-    // }
 
         return (
             <div>
